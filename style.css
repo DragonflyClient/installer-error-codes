@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 :root {
     /*--clr-fg: #efefef;
     --clr-bg: #1c3e5b;
@@ -27,7 +23,7 @@ html,
 body {
     width: 100%;
     font-family: Rubik;
-    background-color: #f5f6fa;
+    background-color: #fff;
     overflow-x: hidden
 }
 
@@ -46,8 +42,6 @@ body {
     width: 100%;
     background-color: #fff;
     z-index: 999;
-    /* CHANGE THIS BACK */
-    display: none;
 }
 
 #navbar {
@@ -93,6 +87,12 @@ body {
     flex-direction: row;
     width: 50%;
     justify-content: space-between
+}
+.logo img {
+    width: 120px;
+    max-width: 100%;
+    margin-left: 10px;
+    transition: all .5s ease;
 }
 
 .socials a {
@@ -141,7 +141,7 @@ body {
 }
 
 .logo img {
-    width: 180px;
+    width: 150px;
     max-width: 100%;
     margin-top: 3px;
     transition: all .5s ease;
@@ -243,14 +243,13 @@ a {
 }
 
 .accordion-item-body-content {
-    padding: 1rem;
-    padding-top: .4rem;
+    padding: .4rem 1rem 1rem;
     line-height: 1.5rem;
     font-size: 1.1rem
 }
 
 main {
-    margin-top: 50px;
+    margin-top: 120px;
 }
 
 .problem-desc {
@@ -267,17 +266,13 @@ main {
 
 .anchor {
     display: block;
-    height: 60px;
-    margin-top: -115px;
+    height: 95px;
+    margin-top: -55px;
     visibility: hidden;
 }
 
 .error {
     color: white;
-}
-
-section {
-    margin: 75px 0;
 }
 
 @media (max-width: 640px) {
@@ -291,8 +286,6 @@ section {
     .upper-wrapper {
         height: 90px;
         display: flex;
-        /* CHANGE THIS BACK */
-        display: none;
     }
     .upper-wrapper {
         width: 50%;
@@ -313,8 +306,8 @@ section {
         display: none
     }
     .nav ul {
-        height: 90px;
-        width: 350px;
+        height: 100px;
+        width: 65%;
         right: 0;
         display: flex;
         justify-content: space-between;
@@ -333,8 +326,9 @@ section {
         background-color: var(--clr-pdark)
     }
     .logo img {
-        width: 230px
+        width: 150px
     }
+
     .ham-wrapper {
         display: none
     }
@@ -351,8 +345,8 @@ section {
         width: 100%
     }
     .nav ul {
-        height: 90px;
-        width: 30%;
+        height: 100px;
+        width: 40%;
         display: flex;
         justify-content: space-evenly;
         align-items: center
@@ -369,12 +363,13 @@ section {
         position: absolute;
         right: 15%
     }
+    .logo {
+        position: absolute;
+        left: 20%
+    }
 }
 
 @media (max-width:800px) {
-    main {
-        margin-top: 0px;
-    }
     .accordion-item-header {
         font-size: 1.2rem;
         font-weight: 500
@@ -387,5 +382,8 @@ section {
     .accordion-item-body-content .problem-more-info {
         font-size: .98rem;
         line-height: 1.3;
+    }
+    .nav li {
+        font-size: 1.15rem;
     }
 }
