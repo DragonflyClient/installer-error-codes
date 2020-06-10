@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap";
+@import 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap';
 * {
     margin: 0;
     padding: 0;
@@ -19,10 +19,14 @@
     --clr-plight: #FFC247
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     width: 100%;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     background-color: #fff;
     overflow-x: hidden
 }
@@ -88,6 +92,7 @@ body {
     width: 50%;
     justify-content: space-between
 }
+
 .logo img {
     width: 120px;
     max-width: 100%;
@@ -223,6 +228,9 @@ a {
     margin-right: .7rem;
     color: var(--clr-primary)
 }
+.accordion-no-body.accordion-item-header::before {
+    display: none;
+}
 
 .accordion-item-header::before {
     content: '\002B';
@@ -249,7 +257,7 @@ a {
 }
 
 main {
-    margin-top: 120px;
+    margin-top: 110px;
 }
 
 .problem-desc {
@@ -258,6 +266,9 @@ main {
     border-image: linear-gradient(to right, var(--clr-primary) 50%, #fff 75%) 1;
     border-top: 2px solid;
     padding: 1rem;
+}
+.problem-fix {
+    font-size: 1.2rem;
 }
 
 .problem-more-info {
@@ -328,7 +339,6 @@ main {
     .logo img {
         width: 150px
     }
-
     .ham-wrapper {
         display: none
     }
@@ -370,9 +380,15 @@ main {
 }
 
 @media (max-width:800px) {
+    main {
+        margin-top: 80px;
+    }
     .accordion-item-header {
         font-size: 1.2rem;
         font-weight: 500
+    }
+    .accordion-wrapper {
+        margin-top: 20px;
     }
     .accordion-wrapper .problem-desc {
         font-size: 1rem;
