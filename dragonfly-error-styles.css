@@ -19,10 +19,6 @@
     --clr-plight: #FFC247
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 html,
 body {
     width: 100%;
