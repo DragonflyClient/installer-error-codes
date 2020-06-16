@@ -24,7 +24,11 @@ body {
     width: 100%;
     font-family: Rubik, sans-serif;
     background-color: #fff;
-    overflow-x: hidden
+    overflow-x: hidden;
+    line-height: 1.3;
+}
+html {
+    scroll-behavior: smooth;
 }
 
 .nav a {
@@ -40,6 +44,7 @@ body {
     position: fixed;
     height: 60px;
     width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
     background-color: #fff;
     z-index: 999;
 }
@@ -150,6 +155,7 @@ body {
 
 a {
     outline: 0;
+    color: var(--clr-primary);
 }
 
 .ham-wrapper {
@@ -187,9 +193,39 @@ a {
 .line+.line {
     margin-top: 6px
 }
-
+h4, h1, h2, h3 {
+    font-weight: 500;
+}
+.common-fixes > ol > li {
+    margin: 30px 0;
+}
+ol{
+    padding: 0 25px;
+}
+ol li{
+    padding-left: 0;
+    margin: 6px 0;
+}
+.common-fixes-anchor {
+    height: 60px;
+}
+.common-fixes p {
+    margin: 10px 0;
+}
+.common-fixes h4 {
+    font-size: 1.18rem;
+}
+p {
+    font-size: 1.1rem;
+}
+.error-codes-list h1 {
+    margin-top: 0;
+}
+.error-codes-list > p {
+    margin-top: 10px;
+}
 .accordion-wrapper {
-    width: 90%;
+    width: 95%;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -204,10 +240,10 @@ a {
 
 .accordion-item-header {
     padding: .5rem 3rem .5rem 1rem;
-    min-height: 3.5rem;
+    min-height: 3.2rem;
     line-height: 1.25rem;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     position: relative;
@@ -217,7 +253,7 @@ a {
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none
+    user-select: none;
 }
 
 .accordion-item-header span {
@@ -249,22 +285,23 @@ a {
 .accordion-item-body-content {
     padding: .4rem 1rem 1rem;
     line-height: 1.5rem;
-    font-size: 1.1rem
 }
 
 main {
-    margin-top: 110px;
+    width: 95%;
+    max-width: 1000px;
+    margin: 110px auto 0 auto;
 }
 
 .problem-desc {
     width: 95%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-image: linear-gradient(to right, var(--clr-primary) 50%, #fff 75%) 1;
     border-top: 2px solid;
-    padding: 1rem;
+    padding: .8rem;
 }
 .problem-fix {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .problem-more-info {
@@ -274,10 +311,25 @@ main {
 .anchor {
     display: block;
     height: 95px;
-    margin-top: -55px;
+    margin-top: -75px;
     visibility: hidden;
 }
-
+.common-fixes-anchor {
+    display: block;
+    height: 95px;
+    margin-top: -75px;
+    visibility: hidden;
+}
+/*.enumeration-letter-list {
+    counter-reset: list;
+}
+.enumeration-letter-list > li {
+    list-style: none;
+}
+.enumeration-letter-list > li:before {
+    content: counter(list, lower-alpha) ") ";
+    counter-increment: list;
+}*/
 .error {
     color: white;
 }
@@ -295,7 +347,7 @@ main {
         display: flex;
     }
     .upper-wrapper {
-        width: 50%;
+        width: 250px;
         z-index: 9999
     }
     .nav {

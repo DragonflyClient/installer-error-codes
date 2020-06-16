@@ -57,18 +57,18 @@ accordionList.forEach((accordionHeader) => {
 });
 
 const scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 200,
+    speed: 400,
     speedAsDuration: true,
 });
 const categoryFronend = new SmoothScroll('a[href*="#client-frontend"]', {
-    speed: 200,
+    speed: 400,
     speedAsDuration: true,
 });
 const categoryBackend = new SmoothScroll('a[href*="#client-backend"]', {
-    speed: 200,
+    speed: 400,
     speedAsDuration: true,
 });
 const categoryServerside = new SmoothScroll('a[href*="#server-side"]', {
-    speed: 200,
+    speed: 400,
     speedAsDuration: true,
 });
