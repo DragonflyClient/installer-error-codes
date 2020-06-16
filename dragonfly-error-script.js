@@ -24,6 +24,7 @@ ham.addEventListener('click', toggleNav);
 /*---------------*/
 
 /* #region functions */
+
 // Open / Close the nav menu
 function toggleNav() {
     nav.classList.toggle('nav-active');
@@ -40,21 +41,61 @@ function closeMenu(e) {
 // FAQ Accordion
 accordionList.forEach((accordionHeader) => {
     accordionHeader.addEventListener('click', (event) => {
-        accordionHeader.classList.toggle('accordion-active');
-        const accordionItemBody = accordionHeader.nextElementSibling.nextElementSibling;
-        if (accordionHeader.classList.contains('accordion-active')) {
-            accordionList.forEach((otherAccordion) => {
-                if (otherAccordion !== accordionHeader) {
-                    otherAccordion.classList.remove('accordion-active')
-                    otherAccordion.nextElementSibling.nextElementSibling.style.maxHeight = 0;
-                }
-            })
-            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
-        } else {
-            accordionItemBody.style.maxHeight = 0;
-        }
+        toggleAccordion(accordionHeader);
     });
 });
+
+function toggleAccordion(element) {
+    element.classList.toggle('accordion-active');
+    const accordionItemBody = element.nextElementSibling.nextElementSibling;
+    if (element.classList.contains('accordion-active')) {
+        accordionList.forEach((otherAccordion) => {
+            if (otherAccordion !== element) {
+                otherAccordion.classList.remove('accordion-active')
+                otherAccordion.nextElementSibling.nextElementSibling.style.maxHeight = 0;
+            }
+        })
+        accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
+    } else {
+        accordionItemBody.style.maxHeight = '0';
+    }
+}
+
+// auto-scroll
+let targetElement
+let highlighted = false
+window.onload = function () {
+    const url = new URL(window.location.href)
+    const code = url.searchParams.get("code")
+    targetElement = document.getElementById(code)
+    if (code != null && targetElement != null) {
+        const posY = targetElement.getBoundingClientRect().top - document.getElementById("navbar").clientHeight - 15
+        window.scrollBy(0, posY)
+        checkHighlightElement()
+    }
+}
+
+window.addEventListener('scroll', function () {
+    checkHighlightElement()
+});
+
+function checkHighlightElement() {
+    if (highlighted)
+        return
+
+    const position = targetElement.getBoundingClientRect();
+
+    // checking whether fully visible
+    if (position.top >= 0 && position.bottom <= window.innerHeight && !targetElement.parentElement.classList.contains("highlight")) {
+        highlighted = true
+        setTimeout(() => {
+            toggleAccordion(targetElement)
+        }, 300)
+        setTimeout(() => {
+            targetElement.parentElement.classList.add("highlight")
+        }, 600)
+    }
+}
 
 const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 400,
