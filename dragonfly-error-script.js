@@ -93,7 +93,8 @@ function checkHighlightElement() {
         }, 300)
         setTimeout(() => {
             targetElement.parentElement.classList.add("highlight")
-        }, 600)
+            document.getElementsByTagName("html")[0].style.scrollBehavior = "auto"
+        }, 500)
     }
 }
 
