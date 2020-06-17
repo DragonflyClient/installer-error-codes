@@ -81,11 +81,11 @@ window.addEventListener("load", () => {
 let targetElement
 let highlighted = false
 window.onload = function () {
-    const url = new URL(window.location.href)
-    const code = url.searchParams.get("code")
+    let url = window.location.href
+    let code = url.substr(url.length - 3)
     targetElement = document.getElementById(code)
     if (code != null && targetElement != null) {
-        const posY = targetElement.getBoundingClientRect().top - document.getElementById("navbar").clientHeight - 15
+        const posY = targetElement.getBoundingClientRect().top - document.getElementById("navbar").clientHeight - 20
         window.scrollBy(0, posY)
         checkHighlightElement()
     }
@@ -96,7 +96,7 @@ window.addEventListener('scroll', function () {
 });
 
 function checkHighlightElement() {
-    if (highlighted)
+    if (highlighted || targetElement == null)
         return
 
     const position = targetElement.getBoundingClientRect();
@@ -110,7 +110,7 @@ function checkHighlightElement() {
         setTimeout(() => {
             targetElement.parentElement.classList.add("highlight")
             document.getElementsByTagName("html")[0].style.scrollBehavior = "auto"
-        }, 500)
+        }, 600)
     }
 }
 
