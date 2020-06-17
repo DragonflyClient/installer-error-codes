@@ -61,6 +61,22 @@ function toggleAccordion(element) {
     }
 }
 
+
+// Change direction of logo anchor
+window.addEventListener("scroll", function () {
+    const logoImg = document.querySelector("#logo a")
+    if (document.documentElement.scrollTop < 0) {
+        logoImg.setAttribute("href", "https://inceptioncloud.net/")
+    } else {
+        logoImg.setAttribute("href", "#")
+    }
+})
+window.addEventListener("load", () => {
+    setTimeout(function () {
+        document.getElementsByTagName("html")[0].style.scrollBehavior = "auto"
+    }, 600)
+})
+
 // auto-scroll
 let targetElement
 let highlighted = false
