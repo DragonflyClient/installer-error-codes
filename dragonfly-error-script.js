@@ -66,16 +66,16 @@ function toggleAccordion(element) {
 window.addEventListener("scroll", function () {
     const logoImg = document.querySelector("#logo a")
     if (document.documentElement.scrollTop < 0) {
-        logoImg.setAttribute("href", "https://inceptioncloud.net/")
+        logoImg.setAttribute("href", "https://inceptioncloud.net/%22")
     } else {
         logoImg.setAttribute("href", "#")
     }
 })
-window.addEventListener("load", () => {
-    setTimeout(function () {
-        document.getElementsByTagName("html")[0].style.scrollBehavior = "auto"
-    }, 600)
-})
+// /*window.addEventListener("load", () => {
+//     setTimeout(function () {
+//         document.getElementsByTagName("html")[0].style.scrollBehavior = "auto"
+//     }, 600)
+// })*/
 
 // auto-scroll
 let targetElement
@@ -88,6 +88,8 @@ window.onload = function () {
         const posY = targetElement.getBoundingClientRect().top - document.getElementById("navbar").clientHeight - 20
         window.scrollBy(0, posY)
         checkHighlightElement()
+    } else if (targetElement == null) {
+        document.getElementsByTagName("html")[0].style.scrollBehavior = "auto"
     }
 }
 

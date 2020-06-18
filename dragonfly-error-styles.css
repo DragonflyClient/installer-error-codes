@@ -323,6 +323,9 @@ p
 {
     display: none;
 }
+.accordion-no-body.accordion-item-header {
+    cursor: auto;
+}
 
 .accordion-item-header::before
 {

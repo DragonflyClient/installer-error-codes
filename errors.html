@@ -1,290 +1,261 @@
 <!doctype html>
 <html lang="en">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Dragonfly Error Codes</title>
-      <link rel="shortcut icon" href="../assets/Dragon.svg" type="image/x-icon">
-      <link rel="stylesheet" href="https://cdn.icnet.dev/web/mcicn/css/dragonfly-error-styles.css">
-<!--                  <link rel="stylesheet" href="dragonfly-error-styles.css">-->
-   </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dragonfly Error Codes</title>
+    <link rel="shortcut icon" href="../../assets/Dragon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.icnet.dev/web/drgn/css/dragonfly-error-styles.css">
+    <!--                  <link rel="stylesheet" href="dragonfly-error-styles.css">-->
+</head>
 
-   <body>
-      <div class="header" id="navbar" data-aos="fade-down">
-         <div class="upper-wrapper">
+<body>
+    <div class="header" id="navbar" data-aos="fade-down">
+        <div class="upper-wrapper">
             <div class="logo" id="logo" onclick="closeMenu()">
-               <a href="https://inceptioncloud.net"><img src="../assets/Dragon.png" alt="DRAGONFLY"></a>
+                <a href="https://inceptioncloud.net"><img src="../assets/Dragon.png" alt="DRAGONFLY"></a>
             </div>
             <div class="ham-wrapper">
-               <div class="line line1"></div>
-               <div class="line line2"></div>
-               <div class="line line3"></div>
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
             </div>
-         </div>
-         <div class="nav" id="nav">
+        </div>
+        <div class="nav" id="nav">
             <ul>
-               <li class="item" onclick="closeMenu()">
-                  <a href="#common-fixes">Common fixes</a>
-               </li>
-               <li class="item" onclick="closeMenu()">
-                  <a href="#client-backend">Backend</a>
-               </li>
-               <li class="item" onclick="closeMenu()">
-                  <a href="#client-frontend">Frontend</a>
-               </li>
-               <li class="item" onclick="closeMenu()">
-                  <a href="#server-side">Server</a>
-               </li>
-               <div class="socials">
-                  <a href="https://instagram.com/inceptioncloud">
-                     <i class="fab fa-instagram"></i></a>
-                  <a href="https://twitter.com/inceptioncloud">
-                     <i class="fab fa-twitter"></i></a>
-                  <a href="https://discord.gg/NUGbCgW">
-                     <i class="fab fa-discord"></i></a>
-               </div>
+                <li class="item" onclick="closeMenu()">
+                    <a href="#common-fixes">Common fixes</a>
+                </li>
+                <li class="item" onclick="closeMenu()">
+                    <a href="#client-backend">Backend</a>
+                </li>
+                <li class="item" onclick="closeMenu()">
+                    <a href="#client-frontend">Frontend</a>
+                </li>
+                <li class="item" onclick="closeMenu()">
+                    <a href="#server-side">Server</a>
+                </li>
+                <div class="socials">
+                    <a href="https://instagram.com/inceptioncloud">
+                        <i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/inceptioncloud">
+                        <i class="fab fa-twitter"></i></a>
+                    <a href="https://discord.gg/NUGbCgW">
+                        <i class="fab fa-discord"></i></a>
+                </div>
             </ul>
-         </div>
-      </div>
-      <main>
-         <span class="common-fixes-anchor" id="common-fixes"></span>
-         <div class="common-fixes" style="margin-left: 20px">
+        </div>
+    </div>
+    <main>
+        <span class="common-fixes-anchor" id="common-fixes"></span>
+        <div class="common-fixes" style="margin-left: 20px">
             <h1>Common fixes</h1>
-            <p>Since most of the problems have a similar origin, you should try using the following common fixes in
-               order to solve the problem. Please follow the order of the common fixes when using them. There is no
-               guarantee that these fixes will solve the error, so feel free to contact our support if your problem is
-               still present.</p>
+            <p>Since most of the problems have a similar origin, you should try using the following common fixes in order to solve the problem. Please follow the order of the common fixes when using them. There is no guarantee that these fixes will solve
+                the error, so feel free to contact our support if your problem is still present.</p>
             <ol>
-               <li>
-                  <h4>Run as administrator</h4>
-                  <p>Sometimes, the Dragonfly Installer doesn’t have enough permissions to perform certain actions. In
-                     this case, you have to run it with administrator privileges. This can be done by following the
-                     steps below: </p>
-                  <ol class="enumeration-letter-list" type="a">
-                     <li>Create a file named start.bat in the directory with the installer.</li>
-                     <li>Edit the file with an editor of your choice.</li>
-                     <li>Copy & paste the following line into the file and make sure to replace [Installer Name] with
-                        the name of the installer file (including the .jar ending!). The default name is
-                        Dragonfly-Installer.jar.
-                        java -jar [Installer Name]
-                     </li>
-                     <li>Save the file and close your editor</li>
-                     <li>Open the file’s context menu by right-clicking it and select “Run as administrator”.</li>
-                     <li>Make sure to confirm the start in the upcoming menu.</li>
-                  </ol>
-                  <p>Alternatively, download our prepared start script
-                     <a href="https://cdn.icnet.dev/minecraftmod/installer/run-as-administrator.bat">here</a>, put it in
-                     the right directory and repeat
-                     the steps e) and f). Note that this is only supported, if the installer file is named
-                     Dragonfly-Installer.jar. If it is not, you can still rename it.</p>
-               </li>
-               <li>
-                  <h4>Download the latest version</h4>
-                  <p>It may be the case, that the error you are running into was already solved in a newer version of
-                     the installer, or it came up because you are using an old version. To make sure that this isn’t the
-                     case, always run the latest version of the Dragonfly Installer. You can download it on our website,
-                     or simply click
-                     <a href="https://inceptioncloud.net/download">here</a>.</p>
-               </li>
-               <li>
-                  <h4>Restart your device</h4>
-                  <p>We know you heard this very often, but it’s sometimes so simple. Just try to restart the device you
-                     are running the installer on. This will sometimes fix nasty errors that we spent hours on trying to
-                     solve.</p>
-               </li>
-               <li>
-                  <h4>Try error-specific solutions </h4>
-                  <p>When checking the
-                     <a href="#error-codes-list">list of error
-                        codes</a>, there is always a phrase that explains when and why this
-                     error occurs. This will probably help you find a solution on your own. Sometimes, there are also
-                     error-specific solutions that we add to the list. Just click an entry and it will expand itself
-                     showing some extra things you can try in order to solve them.</p>
-               </li>
-               <li>
-                  <h4>Support</h4>
-                  <p>If none of the above tips could help you solve your error, than there is now other way than asking
-                     us for help. You can get support for all your problems related to any Inception Cloud product on
-                     our official Discord server. There, you have the option to either write a support ticket or join
-                     the support queue, while the latter is used for urgent problems, we prefer the former.</p>
-                  <p>Note: When using our support offer, make sure you have the log files of your Installer ready, since
-                     our time will most likely need them to provide you with a solution. Their name ends with .log and
-                     you can find them in the directory the installer ran in. Always take the latest log file, you can
-                     identify it by it’s name which contains the time and date in the format
-                     <a href="https://nsdateformatter.com/">HH_mm_ss-dd_MM_yyyy</a>.</p>
-               </li>
+                <li>
+                    <h4>Run as administrator</h4>
+                    <p>Sometimes, the Dragonfly Installer doesn’t have enough permissions to perform certain actions. In this case, you have to run it with administrator privileges. This can be done by following the steps below: </p>
+                    <ol class="enumeration-letter-list" type="a">
+                        <li>Create a file named start.bat in the directory with the installer.</li>
+                        <li>Edit the file with an editor of your choice.</li>
+                        <li>Copy & paste the following line into the file and make sure to replace [Installer Name] with the name of the installer file (including the .jar ending!). The default name is Dragonfly-Installer.jar. java -jar [Installer Name]
+                        </li>
+                        <li>Save the file and close your editor</li>
+                        <li>Open the file’s context menu by right-clicking it and select “Run as administrator”.</li>
+                        <li>Make sure to confirm the start in the upcoming menu.</li>
+                    </ol>
+                    <p>Alternatively, download our prepared start script
+                        <a href="https://cdn.icnet.dev/minecraftmod/installer/run-as-administrator.bat">here</a>, put it in the right directory and repeat the steps e) and f). Note that this is only supported, if the installer file is named Dragonfly-Installer.jar.
+                        If it is not, you can still rename it.</p>
+                </li>
+                <li>
+                    <h4>Download the latest version</h4>
+                    <p>It may be the case, that the error you are running into was already solved in a newer version of the installer, or it came up because you are using an old version. To make sure that this isn’t the case, always run the latest version
+                        of the Dragonfly Installer. You can download it on our website, or simply click
+                        <a href="https://inceptioncloud.net/download">here</a>.</p>
+                </li>
+                <li>
+                    <h4>Restart your device</h4>
+                    <p>We know you heard this very often, but it’s sometimes so simple. Just try to restart the device you are running the installer on. This will sometimes fix nasty errors that we spent hours on trying to solve.
+                    </p>
+                </li>
+                <li>
+                    <h4>Try error-specific solutions </h4>
+                    <p>When checking the
+                        <a href="#error-codes-list">list of error
+                        codes</a>, there is always a phrase that explains when and why this error occurs. This will probably help you find a solution on your own. Sometimes, there are also error-specific solutions that we add to
+                        the list. Just click an entry and it will expand itself showing some extra things you can try in order to solve them.</p>
+                </li>
+                <li>
+                    <h4>Support</h4>
+                    <p>If none of the above tips could help you solve your error, than there is now other way than asking us for help. You can get support for all your problems related to any Inception Cloud product on our official Discord server. There,
+                        you have the option to either write a support ticket or join the support queue, while the latter is used for urgent problems, we prefer the former.</p>
+                    <p>Note: When using our support offer, make sure you have the log files of your Installer ready, since our time will most likely need them to provide you with a solution. Their name ends with .log and you can find them in the directory
+                        the installer ran in. Always take the latest log file, you can identify it by it’s name which contains the time and date in the format
+                        <a href="https://nsdateformatter.com/">HH_mm_ss-dd_MM_yyyy</a>.</p>
+                </li>
             </ol>
-         </div>
-         <span class="anchor" id="error-codes-list"></span>
-         <div class="error-codes-list">
+        </div>
+        <span class="anchor" id="error-codes-list"></span>
+        <div class="error-codes-list">
             <h1>List of error codes</h1>
-            <p>Below, you will find a list of all errors that are recognized by the installer together with their error
-               codes, causes and ways to fix them. Please consider trying the <a href="#">common fixes</a> above before
-               checking the
-               list.</p>
+            <p>Below, you will find a list of all errors that are recognized by the installer together with their error codes, causes and ways to fix them. Please consider trying the <a href="#">common fixes</a> above before checking the list.
+            </p>
             <div class="accordion-wrapper">
-               <section>
-                  <span class="anchor" id="client-backend"></span>
-                  <h2>Client-Backend</h2>
-                  <div class="accordion-item">
-                     <div id="101" class="accordion-item-header">
-                        <span>101</span>File not found
-                     </div>
-                     <div class="problem-desc">
-                        <p>A file or directory that is required for the installer to work cannot be found. Those files
-                           can be client resources, but it will most likely be the .minecraft folder. This folder is the
-                           destination of all Dragonfly files, so it is indispensable for the installer to work.</p>
-                     </div>
-                     <div class="accordion-item-body">
-                        <div class="accordion-item-body-content">
-                           <div class="problem-fix">
-                              <p>Usually, it is located in the AppData directory (%appdata%/.minecraft) and contains the
-                                 vanilla Minecraft client and more resources. If this error occurs, make sure you have
-                                 installed Minecraft and ran a 1.8-version at least once. It is also possible that the
-                                 directory was moved somewhere else. In this case, try to move it back to the above
-                                 mentioned path. In the future, you will have the ability to search for your .minecraft
-                                 folder manually.</p>
-                           </div>
+                <section>
+                    <span class="anchor" id="client-backend"></span>
+                    <h2>Client-Backend</h2>
+                    <div class="accordion-item">
+                        <div id="101" class="accordion-item-header">
+                            <span>101</span>File not found
                         </div>
-                     </div>
-                  </div>
-                  <div class="accordion-item">
-                     <div id="102" class="accordion-item-header accordion-no-body">
-                        <span>102</span>File creation failed
-                     </div>
-                     <div class="problem-desc">
-                        <p>The creation of a file (e.g. the launcher profile or options) fails and the installer cannot
-                           continue its work.</p> <!-- kein fix? -->
-                     </div>
-                     <div class="accordion-item-body">
-                     </div>
-                  </div>
-                  <div class="accordion-item">
-                     <div id="103" class="accordion-item-header accordion-no-body">
-                        <span>103</span>File not accessible
-                     </div>
-                     <div class="problem-desc">
-                        <p>The installer cannot read, create or modify a file that is required for the installation to
-                           work. </p>
-                     </div>
-                     <div class="accordion-item-body">
-                     </div>
-                  </div>
-                  <div class="accordion-item">
-                     <div id="104" class="accordion-item-header accordion-no-body">
-                        <span>104</span>File deletion failed
-                     </div>
-                     <div class="problem-desc">
-                        <p>The installer tried to remove an (old) file from the disk, but the deletion failed.</p>
-                     </div>
-                     <div class="accordion-item-body">
-                     </div>
-                  </div>
-                  <div class="accordion-item">
-                     <div id="105" class="accordion-item-header accordion-no-body">
-                        <span>105</span>Systemdata not accessible
-                     </div>
-                     <div class="problem-desc">
-                        <p>Information about the system, like the amount of RAM or the running tasks, are not
-                           accessible.</p>
-                     </div>
-                     <div class="accordion-item-body">
-                     </div>
-                  </div>
-               </section>
-               <section>
-                  <span class="anchor" id="client-frontend"></span>
-                  <h2>Client-Frontend</h2>
-                  <div class="accordion-item">
-                     <div id="201" class="accordion-item-header">
-                        <span>201</span>Image not found
-                     </div>
-                     <div class="problem-desc">
-                        <p>An image that is used the installer interface cannot be found.</p>
-                     </div>
-                     <div class="accordion-item-body">
-                        <div class="accordion-item-body-content">
-                           <div class="problem-fix">
-                              <p>The installer comes with all image resouces required for the interface. This error
-                                 occurs if an image file is not found or corrupted. In this case, your installer file
-                                 may be corrupted, and you should consider downloading a new one. </p>
-                           </div>
+                        <div class="problem-desc">
+                            <p>A file or directory that is required for the installer to work cannot be found. Those files can be client resources, but it will most likely be the .minecraft folder. This folder is the destination of all Dragonfly files, so
+                                it is indispensable for the installer to work.</p>
                         </div>
-                     </div>
-                  </div>
-                  <div class="accordion-item">
-                     <div id="202" class="accordion-item-header">
-                        <span>202</span>Font not found
-                     </div>
-                     <div class="problem-desc">
-                        <p>A font that is used by the installer interface cannot be found.</p>
-                     </div>
-                     <div class="accordion-item-body">
-                        <div class="accordion-item-body-content">
-                           <div class="problem-fix">
-                              <p>The installer comes with all fonts required for the interface and temporary installs
-                                 them on your device while it is running. The error occurs if a font file is not found,
-                                 corrupted or if the installation of a font fails due to any other reason. In this case,
-                                 your installer file may be corrupted, and you should consider downloading a new
-                                 one.</p>
-                           </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                <div class="problem-fix">
+                                    <p>Usually, it is located in the AppData directory (%appdata%/.minecraft) and contains the vanilla Minecraft client and more resources. If this error occurs, make sure you have installed Minecraft and ran a 1.8-version
+                                        at least once. It is also possible that the directory was moved somewhere else. In this case, try to move it back to the above mentioned path. In the future, you will have the ability to search for your .minecraft
+                                        folder manually.</p>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </section>
-               <span class="anchor" id="server-side"></span>
-               <section>
-                  <h2>Server-side</h2>
-                  <div class="accordion-item">
-                     <div id="301" class="accordion-item-header">
-                        <span>301</span>File on server not found
-                     </div>
-                     <div class="problem-desc">
-                        <p>A file on the Dragonfly servers that the installer wants to download cannot be found.</p>
-                     </div>
-                     <div class="accordion-item-body">
-                        <div class="accordion-item-body-content">
-                           <div class="problem-fix">
-                              <p>In most of the cases, this error happens if you use an outdated version of the
-                                 installer. However, there is a (small) chance that we messed things up, so please
-                                 contact us if the error stays after you downloaded the latest version. </p>
-                           </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div id="102" class="accordion-item-header accordion-no-body">
+                            <span>102</span>File creation failed
                         </div>
-                     </div>
-                  </div>
-               </section>
-               <span class="anchor" id="client-warnings"></span>
-               <section>
-                  <h1>Warnings</h1>
-                  <div class="accordion-item">
-                     <div id="001" class="accordion-item-header accordion-no-body">
-                        <span>001</span> Log file creation failed
-                     </div>
-                     <div class="problem-desc">
-                        <p>Since this warning does not affect the function of the installer, it can be ignored and is
-                           not a problem.</p>
-                     </div>
-                     <div class="accordion-item-body">
+                        <div class="problem-desc">
+                            <p>The creation of a file (e.g. the launcher profile or options) fails and the installer cannot continue its work.</p>
+                            <!-- kein fix? -->
+                        </div>
+                        <div class="accordion-item-body">
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div id="103" class="accordion-item-header accordion-no-body">
+                            <span>103</span>File not accessible
+                        </div>
+                        <div class="problem-desc">
+                            <p>The installer cannot read, create or modify a file that is required for the installation to work. </p>
+                        </div>
+                        <div class="accordion-item-body">
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div id="104" class="accordion-item-header accordion-no-body">
+                            <span>104</span>File deletion failed
+                        </div>
+                        <div class="problem-desc">
+                            <p>The installer tried to remove an (old) file from the disk, but the deletion failed.</p>
+                        </div>
+                        <div class="accordion-item-body">
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div id="105" class="accordion-item-header accordion-no-body">
+                            <span>105</span>Systemdata not accessible
+                        </div>
+                        <div class="problem-desc">
+                            <p>Information about the system, like the amount of RAM or the running tasks, are not accessible.
+                            </p>
+                        </div>
+                        <div class="accordion-item-body">
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <span class="anchor" id="client-frontend"></span>
+                    <h2>Client-Frontend</h2>
+                    <div class="accordion-item">
+                        <div id="201" class="accordion-item-header">
+                            <span>201</span>Image not found
+                        </div>
+                        <div class="problem-desc">
+                            <p>An image that is used the installer interface cannot be found.</p>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                <div class="problem-fix">
+                                    <p>The installer comes with all image resouces required for the interface. This error occurs if an image file is not found or corrupted. In this case, your installer file may be corrupted, and you should consider downloading
+                                        a new one. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div id="202" class="accordion-item-header">
+                            <span>202</span>Font not found
+                        </div>
+                        <div class="problem-desc">
+                            <p>A font that is used by the installer interface cannot be found.</p>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                <div class="problem-fix">
+                                    <p>The installer comes with all fonts required for the interface and temporary installs them on your device while it is running. The error occurs if a font file is not found, corrupted or if the installation of a font
+                                        fails due to any other reason. In this case, your installer file may be corrupted, and you should consider downloading a new one.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <span class="anchor" id="server-side"></span>
+                <section>
+                    <h2>Server-side</h2>
+                    <div class="accordion-item">
+                        <div id="301" class="accordion-item-header">
+                            <span>301</span>File on server not found
+                        </div>
+                        <div class="problem-desc">
+                            <p>A file on the Dragonfly servers that the installer wants to download cannot be found.</p>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                <div class="problem-fix">
+                                    <p>In most of the cases, this error happens if you use an outdated version of the installer. However, there is a (small) chance that we messed things up, so please contact us if the error stays after you downloaded the
+                                        latest version. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <span class="anchor" id="client-warnings"></span>
+                <section>
+                    <h1>Warnings</h1>
+                    <div class="accordion-item">
+                        <div id="001" class="accordion-item-header accordion-no-body">
+                            <span>001</span> Log file creation failed
+                        </div>
+                        <div class="problem-desc">
+                            <p>Since this warning does not affect the function of the installer, it can be ignored and is not a problem.</p>
+                        </div>
+                        <div class="accordion-item-body">
 
-                     </div>
-                  </div>
-               </section>
+                        </div>
+                    </div>
+                </section>
             </div>
-         </div>
-      </main>
+        </div>
+    </main>
 
-      <!-- Fontawesome -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <!-- Fontawesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 
-      <!-- Jquery -->
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
-      <!-- SmoothScroll API -->
-      <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- SmoothScroll API -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 
-      <script src="https://cdn.icnet.dev/web/mcicn/js/dragonfly-error-script.js"></script>
-   </body>
+    <script src="https://cdn.icnet.dev/web/drgn/js/dragonfly-error-script.js"></script>
+<!--   <script src="dragonfly-error-script.js"></script>-->
+</body>
 
 </html>
