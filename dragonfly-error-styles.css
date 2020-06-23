@@ -365,9 +365,19 @@ main
 {
     width: 95%;
     font-size: 1.1rem;
-    border-image: linear-gradient(to right, var(--clr-primary) 50%, #fff 75%) 1;
-    border-top: 2px solid;
     padding: .8rem;
+    position: relative;
+}
+
+.problem-desc::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to right, var(--clr-primary) 50%, #fff 75%);
 }
 
 .problem-fix
