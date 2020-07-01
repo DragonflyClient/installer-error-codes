@@ -34,8 +34,8 @@ function toggleNav() {
 
 // Close the nav menu
 function closeMenu(e) {
-    nav.classList.toggle('nav-active');
-    ham.classList.toggle('ham-active');
+    nav.classList.remove('nav-active');
+    ham.classList.remove('ham-active');
 }
 
 // FAQ Accordion
@@ -62,7 +62,7 @@ function toggleAccordion(element) {
 }
 
 
-// Change direction of logo anchor
+// Change direction of logo anchor by scroll position
 window.addEventListener("scroll", function () {
     const logoImg = document.querySelector("#logo a")
     if (document.documentElement.scrollTop > 0) {
