@@ -241,7 +241,6 @@ ol
 {
     padding: 0 25px;
 }
-
 ol li
 {
     padding-left: 0;
@@ -358,7 +357,7 @@ main
 {
     width: 95%;
     max-width: 1000px;
-    margin: 110px auto 0 auto;
+    margin: 110px auto;
 }
 
 .problem-desc
@@ -390,7 +389,7 @@ main
     margin: 25px 0 10px 0;
 }
 
-.anchor
+.anchor-32
 {
     display: block;
     height: 95px;
@@ -405,7 +404,9 @@ main
     margin-top: -75px;
     visibility: hidden;
 }
-
+.enumeration-letter-list li {
+    list-style-type: lower-alpha;
+}
 /*.enumeration-letter-list {
     counter-reset: list;
 }

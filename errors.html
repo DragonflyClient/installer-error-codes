@@ -7,8 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dragonfly Error Codes</title>
     <link rel="shortcut icon" href="../assets/Dragon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.icnet.dev/web/drgn/css/style.css">
     <link rel="stylesheet" href="https://cdn.icnet.dev/web/drgn/css/dragonfly-error-styles.css">
-<!--    <link rel="stylesheet" href="dragonfly-error-styles.css">-->
+    <!-- IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+    <!--    <link rel="stylesheet" href="dragonfly-error-styles.css">-->
 </head>
 
 <body>
@@ -42,7 +46,7 @@
                         <i class="fab fa-instagram"></i></a>
                     <a href="https://twitter.com/inceptioncloud">
                         <i class="fab fa-twitter"></i></a>
-                    <a href="https://discord.gg/NUGbCgW">
+                    <a href="https://icnet.dev/discord">
                         <i class="fab fa-discord"></i></a>
                 </div>
             </ul>
@@ -99,14 +103,14 @@
                 </li>
             </ol>
         </div>
-        <span class="anchor" id="error-codes-list"></span>
+        <span class="anchor-32" id="error-codes-list"></span>
         <div class="error-codes-list">
             <h1>List of error codes</h1>
             <p>Below, you will find a list of all errors that are recognized by the installer together with their error codes, causes and ways to fix them. Please consider trying the <a href="#">common fixes</a> above before checking the list.
             </p>
             <div class="accordion-wrapper">
                 <section>
-                    <span class="anchor" id="client-backend"></span>
+                    <span class="anchor-32" id="client-backend"></span>
                     <h2>Client-Backend</h2>
                     <div class="accordion-item">
                         <div id="101" class="accordion-item-header">
@@ -170,7 +174,7 @@
                     </div>
                 </section>
                 <section>
-                    <span class="anchor" id="client-frontend"></span>
+                    <span class="anchor-32" id="client-frontend"></span>
                     <h2>Client-Frontend</h2>
                     <div class="accordion-item">
                         <div id="201" class="accordion-item-header">
@@ -206,7 +210,7 @@
                         </div>
                     </div>
                 </section>
-                <span class="anchor" id="server-side"></span>
+                <span class="anchor-32" id="server-side"></span>
                 <section>
                     <h2>Server-side</h2>
                     <div class="accordion-item">
@@ -226,7 +230,7 @@
                         </div>
                     </div>
                 </section>
-                <span class="anchor" id="client-warnings"></span>
+                <span class="anchor-32" id="client-warnings"></span>
                 <section>
                     <h1>Warnings</h1>
                     <div class="accordion-item">
@@ -244,7 +248,65 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="f-upper">
+            <div class="f-desc">
+                <img onclick="scrollToTop()" src="../assets/Dragon.svg" alt="">
+                <p>Play like a monster. Play with Dragonfly.</p>
+                <p>&copy; 2020 InceptionCloud Network</p>
+            </div>
+            <div class="links-wrapper">
+                <div class="f-links">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li><a onclick="scrollToTop()">Home</a></li>
+                        <li><a href="https://inceptioncloud.net/dragonfly/patchnotes/">Updates</a></li>
+                        <li><a href="https://inceptioncloud.net/privacy">Privacy notice</a></li>
+                        <li><a href="https://inceptioncloud.net/dragonfly/download">Download</a></li>
+                    </ul>
+                </div>
 
+                <div class="f-links">
+                    <h3>Latest updates</h3>
+                    <ul>
+                        <li><a href="">v1.0.6.0-alpha</a></li>
+                        <li><a href="">v1.0.5.0-alpha</a></li>
+                        <li><a href="">v1.0.4.0-alpha</a></li>
+                        <li><a href="https://inceptioncloud.net/dragonfly/patchnotes/patch/v1.0.3.0-alpha">v1.0.3.0-alpha</a></li>
+                        <li>
+                            <a href="https://inceptioncloud.net/dragonfly/patchnotes/patch/v1.0.2.0-alpha">v1.0.2.0-alpha</a>
+                        </li>
+                        <li>
+                            <a href="https://inceptioncloud.net/dragonfly/patchnotes/patch/v1.0.1.0-alpha">v1.0.1.0-alpha</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f-links">
+                    <h3>Work with us</h3>
+                    <ul>
+                        <li><a href="#">Developer</a></li>
+                        <li><a href="#">Moderator</a></li>
+                        <li><a href="#">Designer</a></li>
+                        <li><a href="#">Content Creator</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="f-lower">
+            <div class="f-socials">
+                <h3>Follow us on social media to stay up to date</h3>
+                <a href="https://instagram.com/inceptioncloud">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="https://twitter.com/inceptioncloud">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a href="https://icnet.dev/discord">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
     <!-- Fontawesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 
@@ -253,10 +315,15 @@
 
     <!-- SmoothScroll API -->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script>const scroll = new SmoothScroll('a[href*="#"]', {speed: 500, speedAsDuration: true,});</script>
+    <script>
+        const scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 700,
+            speedAsDuration: true,
+        });
+    </script>
 
     <script src="https://cdn.icnet.dev/web/drgn/js/dragonfly-error-script.js"></script>
-<!--   <script src="dragonfly-error-script.js"></script>-->
+    <!--   <script src="dragonfly-error-script.js"></script>-->
 </body>
 
 </html>

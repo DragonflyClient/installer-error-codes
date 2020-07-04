@@ -66,7 +66,8 @@ function toggleAccordion(element) {
 window.addEventListener("scroll", function () {
     const logoImg = document.querySelector("#logo a")
     if (document.documentElement.scrollTop > 0) {
-        logoImg.setAttribute("href", "#")
+        logoImg.removeAttribute("href")
+        logoImg.setAttribute("onclick", "scrollToTop()")
     } else {
         logoImg.setAttribute("href", "https://inceptioncloud.net/dragonfly")
     }
@@ -93,6 +94,13 @@ window.onload = function () {
     }
 }
 
+function scrollToTop() {
+    $("html, body").animate({
+        scrollTop: 0
+    }, 400)
+    closeMenu()
+}
+
 window.addEventListener('scroll', function () {
     checkHighlightElement()
 });
@@ -115,20 +123,3 @@ function checkHighlightElement() {
         }, 600)
     }
 }
-
-const scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 400,
-    speedAsDuration: true,
-});
-const categoryFronend = new SmoothScroll('a[href*="#client-frontend"]', {
-    speed: 400,
-    speedAsDuration: true,
-});
-const categoryBackend = new SmoothScroll('a[href*="#client-backend"]', {
-    speed: 400,
-    speedAsDuration: true,
-});
-const categoryServerside = new SmoothScroll('a[href*="#server-side"]', {
-    speed: 400,
-    speedAsDuration: true,
-});
